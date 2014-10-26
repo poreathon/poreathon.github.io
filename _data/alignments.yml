@@ -1,0 +1,8 @@
+- Filename: ./nickloman-bwa/Ecoli_R73_2D.sort.bam
+  Mean_Alignment_Length: 843
+  Unaligned_Reads: 4670
+  Aligned_Reads: 7153
+- Filename: ./nickloman-bwa-pacbio/Ecoli_R73_2D.sort.bam
+  Mean_Alignment_Length: 6063
+  Unaligned_Reads: 3398
+  Aligned_Reads: 8425

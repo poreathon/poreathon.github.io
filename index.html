@@ -3,6 +3,28 @@ layout: default
 title: Home
 ---
 
+<h2>Alignments</h2>
+
+<h3>E. coli K-12 R7.3</h3>
+
+<table>
+ <tr>
+  <th>Analysis</th>
+  <th>Mean alignment length</th>
+  <th>Unaligned reads</th>
+  <th>Aligned reads</th>
+ </tr>
+{% for aln in site.data.alignments %}
+ <tr>
+  <td>{{ aln.Filename }} </td>
+  <td>{{ aln.Mean_Alignment_Length }}</td>
+  <td>{{ aln.Unaligned_Reads }}</td>
+  <td>{{ aln.Aligned_Reads }}</td>
+ </tr>
+{% endfor %}
+</table>
+
+
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
