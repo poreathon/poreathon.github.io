@@ -1,4 +1,1 @@
-poreathon.github.io
-===================
-
-Website to show poreathon results
+Poreathon.github.io

@@ -1,0 +1,26 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Poreathon
+tagline:          'Continously integrating benchmarking server for nanopore bioinformatics'
+description:      ''
+url:              http://poreathon.github.io
+baseurl:          /
+
+author:
+  name:           'Poreathon'
+  url:            http://poreathon.github.io
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poreathon/poreathon
