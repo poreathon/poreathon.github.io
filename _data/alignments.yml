@@ -6,3 +6,7 @@
   Mean_Alignment_Length: 6063
   Unaligned_Reads: 3398
   Aligned_Reads: 8425
+- Filename: ./nickloman-last-q2/Ecoli_R73_2D.convert_sort.bam
+  Mean_Alignment_Length: 3742
+  Unaligned_Reads: 0
+  Aligned_Reads: 8748

@@ -7,5 +7,5 @@ title: Welcome to Poreathon
   Howdy!
 </div>
 
-Welcome to the Poreathon (Thunderdome)
+<img src="images/poreathon-flowchart.png">
 
