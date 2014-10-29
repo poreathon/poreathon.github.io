@@ -1,0 +1,20 @@
+    [S1]     [E1]  |     [S2]     [E2]  |  [LEN 1]  [LEN 2]  |  [% IDY]  | [TAGS]
+=====================================================================================
+731058 733227 | 2170 1 | 2170 2170 | 98.62 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_2_length_2170_cov_269.342_ID_3
+357472 357752 | 282 1 | 281 282 | 99.65 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+1 357874 | 357951 79 | 357874 357873 | 99.99 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+4295948 4641652 | 703659 357952 | 345705 345708 | 99.99 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+3423663 4296271 | 1575753 703223 | 872609 872531 | 99.98 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+2818197 3423548 | 2180973 1575623 | 605352 605351 | 99.99 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+2818197 2818550 | 2181247 2180895 | 354 353 | 97.46 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+2521253 2818197 | 2477974 2181107 | 296945 296868 | 99.95 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+781369 781844 | 2478182 2477707 | 476 476 | 100.0 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+2518151 2521128 | 2481161 2478184 | 2978 2978 | 100.0 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+1873031 2518116 | 3126166 2481081 | 645086 645086 | 99.99 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+3583428 3584196 | 3126167 3126935 | 769 769 | 100.0 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+1552192 1873039 | 3447782 3126935 | 320848 320848 | 99.99 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+1209603 1552225 | 3790193 3447571 | 342623 342623 | 99.98 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+1207785 1209623 | 3790173 3792011 | 1839 1839 | 99.89 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+1096961 1207805 | 3902835 3791991 | 110845 110845 | 99.99 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+736682 1097583 | 4263296 3902394 | 360902 360903 | 99.98 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1
+357904 736681 | 4641694 4262917 | 378778 378778 | 99.98 | gi|556503834|ref|NC_000913.3|_Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_4641769_cov_67.3358_ID_1

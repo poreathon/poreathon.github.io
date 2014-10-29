@@ -1,0 +1,113 @@
+/mnt/phatso/nick/poreathon/bin/quast-2.3/quast.py output/nickloman-spades/contigs.fasta output/nickloman-spades/scaffolds.fasta -R input/refs/NC_000913.fna.gz -G input/refs/NC_000913.gff
+
+Version 2.3, build 28.02.2014 16:10
+
+System information:
+  OS: Linux-3.2.0-23-generic-x86_64-with-Ubuntu-12.04-precise (linux_64)
+  Python version: 2.7.3
+  CPUs number: 16
+
+Started: 2014-10-29 08:15:31
+
+Logging to /mnt/phatso/nick/poreathon/quast_results/results_2014_10_29_08_15_31/quast.log
+
+NOTICE: Maximum number of threads is set to 16 (use --threads option to set it manually)
+
+Reference:
+  input/refs/NC_000913.fna.gz ==> NC_000913
+
+Contigs:
+  output/nickloman-spades/contigs.fasta ==> contigs
+  output/nickloman-spades/scaffolds.fasta ==> scaffolds
+WARNING: Can't draw plots: please install python-matplotlib.
+
+2014-10-29 08:15:33
+Running Basic statistics processor...
+  Reference genome:
+    NC_000913.fna, Reference length = 4641652, Reference GC % = 50.79
+  Contig files: 
+    1  contigs
+    2  scaffolds
+  Calculating N50 and L50...
+    1  contigs, N50 = 4641769, L50 = 1, Total length = 4643939, GC % = 50.80, # N's per 100 kbp =  0.00
+    2  scaffolds, N50 = 4641769, L50 = 1, Total length = 4643939, GC % = 50.80, # N's per 100 kbp =  0.00
+Done.
+
+2014-10-29 08:15:34
+Running Contig analyzer...
+  2  scaffolds
+  2  Logging to files /mnt/phatso/nick/poreathon/quast_results/results_2014_10_29_08_15_31/contigs_reports/contigs_report_scaffolds.stdout and contigs_report_scaffolds.stderr...
+  2  Running Nucmer
+  2  bin/quast-2.3/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch -p quast_results/results_2014_10_29_08_15_31/contigs_reports/nucmer_output/scaffolds \
+     quast_results/results_2014_10_29_08_15_31/quast_corrected_input/NC_000913.fna \
+     quast_results/results_2014_10_29_08_15_31/quast_corrected_input/scaffolds.fasta \
+     >> quast_results/results_2014_10_29_08_15_31/contigs_reports/contigs_report_scaffolds.stdout \
+     2>> quast_results/results_2014_10_29_08_15_31/contigs_reports/contigs_report_scaffolds.stderr
+  2  bin/quast-2.3/libs/MUMmer3.23-linux/delta-filter -i 95 quast_results/results_2014_10_29_08_15_31/contigs_reports/nucmer_output/scaffolds.delta \
+     > quast_results/results_2014_10_29_08_15_31/contigs_reports/nucmer_output/scaffolds.fdelta \
+     2> quast_results/results_2014_10_29_08_15_31/contigs_reports/contigs_report_scaffolds.stderr
+  2  bin/quast-2.3/libs/MUMmer3.23-linux/show-coords quast_results/results_2014_10_29_08_15_31/contigs_reports/nucmer_output/scaffolds.delta \
+     > quast_results/results_2014_10_29_08_15_31/contigs_reports/nucmer_output/scaffolds.coords_tmp \
+     2> quast_results/results_2014_10_29_08_15_31/contigs_reports/contigs_report_scaffolds.stderr
+  2  bin/quast-2.3/libs/MUMmer3.23-linux/show-snps -S -T -H quast_results/results_2014_10_29_08_15_31/contigs_reports/nucmer_output/scaffolds.delta \
+     < quast_results/results_2014_10_29_08_15_31/contigs_reports/nucmer_output/scaffolds.coords.headless \
+     > quast_results/results_2014_10_29_08_15_31/contigs_reports/nucmer_output/scaffolds.all_snps \
+     2> quast_results/results_2014_10_29_08_15_31/contigs_reports/contigs_report_scaffolds.stderr
+  1  bin/quast-2.3/libs/MUMmer3.23-linux/delta-filter -i 95 quast_results/results_2014_10_29_08_15_31/contigs_reports/nucmer_output/contigs.delta \
+     > quast_results/results_2014_10_29_08_15_31/contigs_reports/nucmer_output/contigs.fdelta \
+     2> quast_results/results_2014_10_29_08_15_31/contigs_reports/contigs_report_contigs.stderr
+  1  bin/quast-2.3/libs/MUMmer3.23-linux/show-coords quast_results/results_2014_10_29_08_15_31/contigs_reports/nucmer_output/contigs.delta \
+     > quast_results/results_2014_10_29_08_15_31/contigs_reports/nucmer_output/contigs.coords_tmp \
+     2> quast_results/results_2014_10_29_08_15_31/contigs_reports/contigs_report_contigs.stderr
+  1  bin/quast-2.3/libs/MUMmer3.23-linux/show-snps -S -T -H quast_results/results_2014_10_29_08_15_31/contigs_reports/nucmer_output/contigs.delta \
+     < quast_results/results_2014_10_29_08_15_31/contigs_reports/nucmer_output/contigs.coords.headless \
+     > quast_results/results_2014_10_29_08_15_31/contigs_reports/nucmer_output/contigs.all_snps \
+     2> quast_results/results_2014_10_29_08_15_31/contigs_reports/contigs_report_contigs.stderr
+  2  Alignments: quast_results/results_2014_10_29_08_15_31/contigs_reports/alignments_scaffolds.tsv
+  2  Analysis is finished.
+
+  1  Alignments: quast_results/results_2014_10_29_08_15_31/contigs_reports/alignments_contigs.tsv
+  1  Analysis is finished.
+
+  Creating total report...
+    saved to /mnt/phatso/nick/poreathon/quast_results/results_2014_10_29_08_15_31/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Creating total report...
+    saved to /mnt/phatso/nick/poreathon/quast_results/results_2014_10_29_08_15_31/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+Done.
+
+2014-10-29 08:15:49
+Running NA-NGA calculation...
+  1  contigs, Largest alignment = 2477974, NA50 = 2477974, NGA50 = 2477974, LA50 = 1, LGA50 = 1
+  2  scaffolds, Largest alignment = 2477974, NA50 = 2477974, NGA50 = 2477974, LA50 = 1, LGA50 = 1
+Done.
+
+2014-10-29 08:15:50
+Running Genome analyzer...
+  Loaded 4516 genes
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  contigs
+  2  scaffolds
+  1  Analysis is finished.
+  2  Analysis is finished.
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2014-10-29 08:15:52
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 1: Creating contig alignment plot...
+Done
+
+2014-10-29 08:15:52
+RESULTS:
+  Text versions of total report are saved to /mnt/phatso/nick/poreathon/quast_results/results_2014_10_29_08_15_31/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /mnt/phatso/nick/poreathon/quast_results/results_2014_10_29_08_15_31/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /mnt/phatso/nick/poreathon/quast_results/results_2014_10_29_08_15_31/report.html
+  Log saved to /mnt/phatso/nick/poreathon/quast_results/results_2014_10_29_08_15_31/quast.log
+
+Finished: 2014-10-29 08:15:52
+Elapsed time: 0:00:20.613156
+NOTICEs: 3; WARNINGs: 1; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
