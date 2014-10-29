@@ -13,6 +13,7 @@ title: Home
   <th>Mean alignment length</th>
   <th>Unaligned reads</th>
   <th>Aligned reads</th>
+  <th>Analysis</th>
  </tr>
 {% for aln in site.data.alignments %}
  <tr>
@@ -20,6 +21,8 @@ title: Home
   <td>{{ aln.Mean_Alignment_Length }}</td>
   <td>{{ aln.Unaligned_Reads }}</td>
   <td>{{ aln.Aligned_Reads }}</td>
+  <td><a href="output/{{ aln.Reference }}/{{ aln.Analysis }}/{{ aln.Reference }}.sort.draw_histo.png">Coverage plot</a>
+      <a href="output/{{ aln.Reference }}/{{ aln.Analysis }}/{{ aln.Reference }}/index.html">Pipeline report</a></td>
  </tr>
 {% endfor %}
 </table>

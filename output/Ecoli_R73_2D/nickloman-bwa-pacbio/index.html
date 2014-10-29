@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style type='text/css'>
+
+            body {
+                font-family: arial;
+                margin: 0;
+                padding: 0;
+                color: #333;
+            }
+            #hd {
+                padding: 0 1em 1em 1em;
+                background-color: #f0f0f0;
+            }
+            
+            h1 {
+            	padding-top: 0.5em;
+            	margin-top: 0;
+            }
+            
+            #bd {
+                padding: 0.5em 1em 1em 1em;
+            }
+            .docLabel, .constraintLabel { font-weight: bold; margin-right: 1em; }
+            .constraintLabel { xcolor: orange; }
+            .creationDate  { font-size: 80%; font-style: italic; color: #555; }
+            .creationDate a:link, .creationDate a:visited { color: inherit; text-decoration: none; } 
+            .creationDate a:hover, .creationDate a:active { color: inherit; text-decoration: underline; } 
+            
+            .timeline {
+            	height: 2em;
+            	font-size: 70%;
+            	margin-left: 30px;
+            	position: relative;
+            }
+            .timerow {
+            	position: relative;
+            	color: white;
+            }
+            
+            .stageblock {
+                display: inline-block;
+              	padding: 0.2em 0;
+            	text-align: center;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;            	
+				background-color: #41568D ;
+				background-color: #90B96F; 
+            	color: white;
+            }
+            
+            .joiner {
+                display: inline-block;
+              	padding: 0 0;
+                margin: 0 0;
+            	text-align: center;
+                color: black;
+            }
+            
+            
+            .transparentblock {
+                display: inline-block;
+				background-color: #fff;
+                height: 15px;
+            	text-align: center;
+            }
+            
+           .blockannotation {
+                display: inline-block; 
+            	text-align: center;
+                padding-left: 0.5em;
+                font-size: 85%;
+            }
+            .annotationline {
+            	height: 0.9em;
+            	font-size: 70%;
+            	margin-left: 30px;
+            	position: relative;
+            }
+            br.h2hr {
+                clear: both;
+            }
+			
+            .stageblock.failed {
+           		background-color: #E64E4E;
+            }
+            
+            .statusMark.fail {
+           		color: #ff5757;
+           		font-weight: bold;
+            }
+            
+           .timeblock.duration {
+	           color: black;
+           	   background-color: white;
+            } 
+
+            .dra { 
+                position: relative;
+                top: 0.6em;
+            }
+            
+            
+            .timelineborder {
+	            border-top: solid 1px #41568D;
+				height: 1px;
+				position: absolute;
+				top: 45%;
+				width: 90%; 
+            }
+            
+            
+            .timelineborder.right {
+            	right: 2px;
+            }
+            
+            a.stageLink:link, a.stageLink:visited {
+            	color: white;
+            	text-decoration: none;
+            }
+            a.stageLink:hover, a.stageLink:active {
+            	color: white;
+            	text-decoration: underline;
+            }
+            
+            hr {
+            	margin-top: 2.8em;
+            }
+            
+			h2.hr {
+			    font-size: 16pt;
+			    color: #444;	
+				position: relative;
+				top: -1em;
+				margin-top: 0;
+				background-color: white;
+				float: left;
+				margin-left: 20px;
+				padding: 0px 10px;
+			}
+			
+			.stageList {
+			     background-color: #F0F0F0;
+			     list-style-type: none;
+			     -webkit-border-top-left-radius: 2px;
+			     -webkit-border-top-right-radius: 2px;
+			     -moz-border-radius-topleft: 2px;
+			     -moz-border-radius-topright: 2px;
+			     border-top-left-radius: 2px;
+			     border-top-right-radius: 2px;
+			}
+			 
+			.stageList table {
+				font-size: 10pt;
+			}
+			.stageList th {
+			 	text-align: right;
+			 	padding-right: 0.5em;
+			 }
+			 .stageList td {
+			 	text-align: left;
+			 	padding-right: 0.5em;
+			 	background: #FCFCFC;
+				padding: 3px 0.5em;
+			 }
+				 
+			 .stageListOuter {
+			 	padding-left: 0px;
+			 	clear: both;
+			 }
+			 .stageList h3 {
+			   box-shadow: 1px 1px 3px black;
+			   position: relative;
+			   padding: 0.5em;
+			   background-color: #41568D;
+			   color: white;
+			     -webkit-border-top-left-radius: 3px;
+			     -webkit-border-top-right-radius: 3px;
+			     -moz-border-radius-topleft: 3px;
+			     -moz-border-radius-topright: 3px;
+			     border-top-left-radius: 3px;
+			     border-top-right-radius: 3px;
+			     font-size: 12pt;
+			 }
+			 a:target {
+			   color: yellow !important;
+			 }
+			 
+			 .stageList .bd {
+			   margin: 0.5em;            
+			   padding-bottom: 1em;
+		     }
+		     
+		     .statusMark {
+		     	position: absolute;
+		     	right: 1em;
+		     }
+		     div.status {
+		     	clear: both;
+		     	margin-left: 30px;
+		     	font-size: 110%;
+		     }
+		     div.status.success {
+		     	color: green;
+		     }
+		     div.status.fail {
+		     	color: #e01f1f;
+		     	font-weight: bold;
+		     }
+		     p.descBody { 
+		     	font-size: 92%; 
+	     	 }
+	     	 .branchTitle {
+	     	 	clear: both;
+	     	 	text-decoration: underline;
+	     	 	font-size: 95%;
+	     	 }
+        </style>
+    </head>
+    <body>
+        <div id='hd'>
+            <h1>Pipeline Report</h1>
+            <p class='creationDate'>Created by <a class='unobtrusiveLink' href='http://bpipe.org'>Bpipe</a>, Mon Oct 27 12:30:55 GMT 2014</p>
+        </div>
+
+        <div id='bd'>
+        	<hr>
+            <h2 class='hr'>Result</h2>
+            <br class='h2hr'>
+            <div class='status success'>
+	            
+	            Succeeded
+	            
+            </div>
+            
+        	<hr>
+            <h2 class='hr'>Timeline</h2>
+            <br class='h2hr'>
+            
+            
+                         
+           
+             
+             
+                <div style='width:100%;' class='timeline' >
+                    
+
+                        
+                        <div style="width:4%" 
+                             class='stageblock '>
+                          <a class='stageLink' 
+                             href='#stage_1_index_reference'>index_...</a>
+                        </div>
+                        
+                    
+
+                        
+                                <div class='joiner'>&#8594;</div>
+                              
+                        
+                        <div style="width:77%" 
+                             class='stageblock '>
+                          <a class='stageLink' 
+                             href='#stage_2_align'>align</a>
+                        </div>
+                        
+                    
+
+                        
+                                <div class='joiner'>&#8594;</div>
+                              
+                        
+                        <div style="width:4%" 
+                             class='stageblock '>
+                          <a class='stageLink' 
+                             href='#stage_3_sort'>sort</a>
+                        </div>
+                        
+                    
+
+                        
+                                <div class='joiner'>&#8594;</div>
+                              
+                        
+                        <div style="width:4%" 
+                             class='stageblock '>
+                          <a class='stageLink' 
+                             href='#stage_4_histo'>histo</a>
+                        </div>
+                        
+                    
+
+                        
+                        
+                        <div style="width:4%" 
+                             class='stageblock '>
+                          <a class='stageLink' 
+                             href='#stage_5_draw_histo'>draw_h...</a>
+                        </div>
+                        
+                    
+                </div> 
+                <div style='width:100%;' class='annotationline'>
+                    
+                        <div style="width:4%" class='blockannotation'>
+                            2.930 s
+                        </div>
+                    
+                        <div style="width:77%" class='blockannotation'>
+                            10 minutes, 50.249 s
+                        </div>
+                    
+                        <div style="width:4%" class='blockannotation'>
+                            18.988 s
+                        </div>
+                    
+                        <div style="width:4%" class='blockannotation'>
+                            18.988 s
+                        </div>
+                    
+                        <div style="width:4%" class='blockannotation'>
+                            1.397 s
+                        </div>
+                    
+                </div>
+            
+            
+        	<hr>
+            <h2 class='hr'>Pipeline Stages</h2>
+            <br class='h2hr'>
+            <ol class='stageListOuter'>
+            
+                <li class='stageList'>
+                    <h3 class='stageTitle'><a name='stage_1_index_reference'>
+                        
+                            index_reference
+                        
+                        </a>
+                        
+                        <span class='statusMark success' >
+                        
+                        &#10003;
+                        
+                        </span>
+                    </h3>
+                    <div class='bd'>
+
+                    
+                        
+                        
+
+                        <table>
+                        
+
+                        
+                        <tr>
+                            <th class='docLabel'>Inputs</th>
+                            
+                                <td>
+                                <ul class='inputs'>
+                                
+                                    <li class='input'>input/nanopore/ecoli_k12_mg1655/Ecoli_R73_2D.fastq</li>
+                                
+                                </ul>
+                                </td>
+                            
+                            </td>
+                        </tr>
+                        
+                        
+                        <tr><th>Commands</th><td>bwa index input/refs/NC_000913.fna</td></tr>
+
+
+                        
+                        <tr>
+                            <th class='docLabel'>Outputs</th>
+                            
+                            <td>
+                                <ul class='outputs'>
+                                
+                                    <li>input/nanopore/ecoli_k12_mg1655/Ecoli_R73_2D.fastq</li>
+                                
+                                </ul>
+                            </td>
+                            
+                        </tr>
+                        
+
+                        
+                        <tr>
+                            <th class='docLabel'>Tools</th>
+                            <td>
+                            <ul class='tools'>
+                                
+                                  <li class='input'>
+                                    
+                                        <a href='http://bio-bwa.sourceforge.net/'>bwa</a>
+                                     :
+                                    
+                                    
+                                    
+                                     - <span class=toolDesc>BWA is a software package for mapping low-divergent short read sequences against a large reference genome</span>
+                                     
+                                  </li>
+                                
+                            </ul>
+                            </td>
+                        </tr>
+                        
+
+                        
+                        
+                        
+                        <tr>
+                            <th class='docLabel'>Execution Time</th>
+                            <td>
+                                
+                                    2014-10-27 12:19:29 - 2014-10-27 12:19:32
+                                
+                                
+                                (2.930 seconds)
+                                
+                            </td>
+                        </tr>
+                        
+                        </table>
+                    
+                    </div>
+                </li>
+            
+                <li class='stageList'>
+                    <h3 class='stageTitle'><a name='stage_2_align'>
+                        
+                            align
+                        
+                        </a>
+                        
+                        <span class='statusMark success' >
+                        
+                        &#10003;
+                        
+                        </span>
+                    </h3>
+                    <div class='bd'>
+
+                    
+                        
+                        
+
+                        <table>
+                        
+
+                        
+                        <tr>
+                            <th class='docLabel'>Inputs</th>
+                            
+                                <td>
+                                <ul class='inputs'>
+                                
+                                    <li class='input'>input/nanopore/ecoli_k12_mg1655/Ecoli_R73_2D.fastq</li>
+                                
+                                </ul>
+                                </td>
+                            
+                            </td>
+                        </tr>
+                        
+                        
+                        <tr><th>Commands</th><td>bwa mem -t 4 -x pacbio input/refs/NC_000913.fna input/nanopore/ecoli_k12_mg1655/Ecoli_R73_2D.fastq > output/alignment/Ecoli_R73_2D/nickloman-bwa-pacbio/Ecoli_R73_2D.fastq.align</td></tr>
+
+
+                        
+                        <tr>
+                            <th class='docLabel'>Outputs</th>
+                            
+                            <td>
+                                <ul class='outputs'>
+                                
+                                    <li>output/alignment/Ecoli_R73_2D/nickloman-bwa-pacbio/Ecoli_R73_2D.fastq.align</li>
+                                
+                                </ul>
+                            </td>
+                            
+                        </tr>
+                        
+
+                        
+                        <tr>
+                            <th class='docLabel'>Tools</th>
+                            <td>
+                            <ul class='tools'>
+                                
+                                  <li class='input'>
+                                    
+                                        <a href='http://bio-bwa.sourceforge.net/'>bwa</a>
+                                     :
+                                    
+                                    
+                                    
+                                     - <span class=toolDesc>BWA is a software package for mapping low-divergent short read sequences against a large reference genome</span>
+                                     
+                                  </li>
+                                
+                            </ul>
+                            </td>
+                        </tr>
+                        
+
+                        
+                        
+                        
+                        <tr>
+                            <th class='docLabel'>Execution Time</th>
+                            <td>
+                                
+                                    2014-10-27 12:19:32 - 2014-10-27 12:30:22
+                                
+                                
+                                (10 minutes, 50.398 seconds)
+                                
+                            </td>
+                        </tr>
+                        
+                        </table>
+                    
+                    </div>
+                </li>
+            
+                <li class='stageList'>
+                    <h3 class='stageTitle'><a name='stage_3_sort'>
+                        
+                            sort
+                        
+                        </a>
+                        
+                        <span class='statusMark success' >
+                        
+                        &#10003;
+                        
+                        </span>
+                    </h3>
+                    <div class='bd'>
+
+                    
+                        
+                        
+
+                        <table>
+                        
+
+                        
+                        <tr>
+                            <th class='docLabel'>Inputs</th>
+                            
+                                <td>
+                                <ul class='inputs'>
+                                
+                                    <li class='input'>output/alignment/Ecoli_R73_2D/nickloman-bwa-pacbio/Ecoli_R73_2D.fastq.align</li>
+                                
+                                </ul>
+                                </td>
+                            
+                            </td>
+                        </tr>
+                        
+                        
+                        <tr><th>Commands</th><td>samtools view -bS output/alignment/Ecoli_R73_2D/nickloman-bwa-pacbio/Ecoli_R73_2D.fastq.align | samtools sort -@ 4 - output/alignment/Ecoli_R73_2D/nickloman-bwa-pacbio/Ecoli_R73_2D.fastq.sort</td></tr>
+
+
+                        
+                        <tr>
+                            <th class='docLabel'>Outputs</th>
+                            
+                            <td>
+                                <ul class='outputs'>
+                                
+                                    <li>output/alignment/Ecoli_R73_2D/nickloman-bwa-pacbio/Ecoli_R73_2D.fastq.sort.bam</li>
+                                
+                                </ul>
+                            </td>
+                            
+                        </tr>
+                        
+
+                        
+                        <tr>
+                            <th class='docLabel'>Tools</th>
+                            <td>
+                            <ul class='tools'>
+                                
+                                  <li class='input'>
+                                    
+                                        <a href='http://samtools.sourceforge.net/'>samtools</a>
+                                     :
+                                    1.1
+
+                                    
+                                    
+                                     - <span class=toolDesc>A suite of utilities for sorting, indexing, viewing and calling variants on NGS data</span>
+                                     
+                                  </li>
+                                
+                            </ul>
+                            </td>
+                        </tr>
+                        
+
+                        
+                        
+                        
+                        <tr>
+                            <th class='docLabel'>Execution Time</th>
+                            <td>
+                                
+                                    2014-10-27 12:30:22 - 2014-10-27 12:30:41
+                                
+                                
+                                (19.063 seconds)
+                                
+                            </td>
+                        </tr>
+                        
+                        </table>
+                    
+                    </div>
+                </li>
+            
+                <li class='stageList'>
+                    <h3 class='stageTitle'><a name='stage_4_histo'>
+                        
+                            histo
+                        
+                        </a>
+                        
+                        <span class='statusMark success' >
+                        
+                        &#10003;
+                        
+                        </span>
+                    </h3>
+                    <div class='bd'>
+
+                    
+                        
+                        
+
+                        <table>
+                        
+
+                        
+                        <tr>
+                            <th class='docLabel'>Inputs</th>
+                            
+                                <td>
+                                <ul class='inputs'>
+                                
+                                    <li class='input'>output/alignment/Ecoli_R73_2D/nickloman-bwa-pacbio/Ecoli_R73_2D.fastq.sort.bam</li>
+                                
+                                </ul>
+                                </td>
+                            
+                            </td>
+                        </tr>
+                        
+                        
+                        <tr><th>Commands</th><td>genomeCoverageBed -ibam output/alignment/Ecoli_R73_2D/nickloman-bwa-pacbio/Ecoli_R73_2D.fastq.sort.bam | grep ^genome > output/alignment/Ecoli_R73_2D/nickloman-bwa-pacbio/Ecoli_R73_2D.fastq.sort.bam.cov.txt</td></tr>
+
+
+                        
+                        <tr>
+                            <th class='docLabel'>Outputs</th>
+                            
+                            <td>
+                                <ul class='outputs'>
+                                
+                                    <li>output/alignment/Ecoli_R73_2D/nickloman-bwa-pacbio/Ecoli_R73_2D.fastq.sort.bam</li>
+                                
+                                </ul>
+                            </td>
+                            
+                        </tr>
+                        
+
+                        
+
+                        
+                        
+                        
+                        <tr>
+                            <th class='docLabel'>Execution Time</th>
+                            <td>
+                                
+                                    2014-10-27 12:30:41 - 2014-10-27 12:30:53
+                                
+                                
+                                (11.897 seconds)
+                                
+                            </td>
+                        </tr>
+                        
+                        </table>
+                    
+                    </div>
+                </li>
+            
+                <li class='stageList'>
+                    <h3 class='stageTitle'><a name='stage_5_draw_histo'>
+                        
+                            draw_histo
+                        
+                        </a>
+                        
+                        <span class='statusMark success' >
+                        
+                        &#10003;
+                        
+                        </span>
+                    </h3>
+                    <div class='bd'>
+
+                    
+                        
+                        
+
+                        <table>
+                        
+
+                        
+                        <tr>
+                            <th class='docLabel'>Inputs</th>
+                            
+                                <td>
+                                <ul class='inputs'>
+                                
+                                    <li class='input'>output/alignment/Ecoli_R73_2D/nickloman-bwa-pacbio/Ecoli_R73_2D.fastq.sort.bam</li>
+                                
+                                </ul>
+                                </td>
+                            
+                            </td>
+                        </tr>
+                        
+                        
+                        <tr><th>Commands</th><td>cov_histogram.R output/alignment/Ecoli_R73_2D/nickloman-bwa-pacbio/Ecoli_R73_2D.fastq.sort.bam.cov.txt output/alignment/Ecoli_R73_2D/nickloman-bwa-pacbio/Ecoli_R73_2D.fastq.sort.draw_histo.png</td></tr>
+
+
+                        
+                        <tr>
+                            <th class='docLabel'>Outputs</th>
+                            
+                            <td>
+                                <ul class='outputs'>
+                                
+                                    <li>output/alignment/Ecoli_R73_2D/nickloman-bwa-pacbio/Ecoli_R73_2D.fastq.sort.draw_histo.png</li>
+                                
+                                </ul>
+                            </td>
+                            
+                        </tr>
+                        
+
+                        
+
+                        
+                        
+                        
+                        <tr>
+                            <th class='docLabel'>Execution Time</th>
+                            <td>
+                                
+                                    2014-10-27 12:30:53 - 2014-10-27 12:30:55
+                                
+                                
+                                (1.436 seconds)
+                                
+                            </td>
+                        </tr>
+                        
+                        </table>
+                    
+                    </div>
+                </li>
+            
+        </ol>
+        
+        
+        </div>
+    </body>
+</html>
