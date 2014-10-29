@@ -17,12 +17,12 @@ title: Home
  </tr>
 {% for aln in site.data.alignments %}
  <tr>
-  <td>{{ aln.Filename }} </td>
+  <td>{{ aln.Analysis }} </td>
   <td>{{ aln.Mean_Alignment_Length }}</td>
   <td>{{ aln.Unaligned_Reads }}</td>
   <td>{{ aln.Aligned_Reads }}</td>
-  <td><a href="output/{{ aln.Reference }}/{{ aln.Analysis }}/{{ aln.Reference }}.sort.draw_histo.png">Coverage plot</a>
-      <a href="output/{{ aln.Reference }}/{{ aln.Analysis }}/{{ aln.Reference }}/index.html">Pipeline report</a></td>
+  <td><a href="output/alignment/{{ aln.Analysis }}/{{ aln.Reference }}.sort.draw_histo.png">Coverage plot</a>
+      <a href="output/alignment/{{ aln.Analysis }}/{{ aln.Reference }}/index.html">Pipeline report</a></td>
  </tr>
 {% endfor %}
 </table>
@@ -35,6 +35,7 @@ title: Home
  <tr>
   <th>Analysis</th>
   <th>NG50</th>
+  <th>bPipe result</th>
   <th>QUAST result</th>
  </tr>
  <tr>

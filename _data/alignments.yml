@@ -5,13 +5,13 @@
   Unaligned_Reads: 4670
   Aligned_Reads: 7153
 - Analysis: nickloman-bwa-pacio
-  Reference: Ecoli_R73_2D.fastq
+  Input: Ecoli_R73_2D.fastq
   Filename: ./nickloman-bwa-pacbio/Ecoli_R73_2D.sort.bam
   Mean_Alignment_Length: 6063
   Unaligned_Reads: 3398
   Aligned_Reads: 8425
 - Analysis: nickloman-last-q2
-  Reference: Ecoli_R73_2D.fastq
+  Input: Ecoli_R73_2D.fastq
   Filename: ./nickloman-last-q2/Ecoli_R73_2D.convert_sort.bam
   Mean_Alignment_Length: 3742
   Unaligned_Reads: 0
