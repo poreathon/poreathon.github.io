@@ -21,8 +21,8 @@ title: Home
   <td>{{ aln.Mean_Alignment_Length }}</td>
   <td>{{ aln.Unaligned_Reads }}</td>
   <td>{{ aln.Aligned_Reads }}</td>
-  <td><a href="output/alignment/{{ aln.Analysis }}/{{ aln.Reference }}.sort.draw_histo.png">Coverage plot</a>
-      <a href="output/alignment/{{ aln.Analysis }}/{{ aln.Reference }}/index.html">Pipeline report</a></td>
+  <td><a href="output/alignment/{{ aln.Analysis }}/{{ aln.Input }}.sort.draw_histo.png">Coverage plot</a>
+      <a href="output/alignment/{{ aln.Analysis }}/{{ aln.Input }}/index.html">Pipeline report</a></td>
  </tr>
 {% endfor %}
 </table>
