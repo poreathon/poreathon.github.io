@@ -5,24 +5,26 @@ title: Home
 
 <h2>Alignments</h2>
 
-<h3>E. coli K-12 R7.3</h3>
-
 <table>
  <tr>
+  <th>Input</th>
   <th>Analysis</th>
-  <th>Mean alignment length</th>
-  <th>Unaligned reads</th>
-  <th>Aligned reads</th>
+  <th>Contributor</th>
+  <th># aligned</th>
+  <th>% aligned</th>
+  <th>Aln length</th>
   <th>Analysis</th>
  </tr>
-{% for aln in site.data.alignments %}
+{% for aln in site.data.alignments|sort_by:"Input","Percent_Aligned" %}
  <tr>
-  <td>{{ aln.Analysis }} </td>
-  <td>{{ aln.Mean_Alignment_Length }}</td>
-  <td>{{ aln.Unaligned_Reads }}</td>
+  <td>{{ aln.title }} (version {{ aln.version }})</td>
+  <td>{{ aln.Input }}</td>
+  <td>{{ aln.author }}</td>
   <td>{{ aln.Aligned_Reads }}</td>
-  <td><a href="output/alignment/{{ aln.Analysis }}/{{ aln.Input }}.sort.draw_histo.png">Coverage plot</a>
-      <a href="output/alignment/{{ aln.Analysis }}/{{ aln.Input }}/index.html">Pipeline report</a></td>
+  <td>{{ aln.Percent_Aligned }}</td>
+  <td>{{ aln.Mean_Alignment_Length }}</td>
+  <td><a href="output/alignment/{{ aln.Recipe }}_{{ aln.Input }}.histogram.png">Coverage plot</a>
+      <a href="output/bpipe/{{ aln.Recipe }}_{{ aln.Input }}.html">Pipeline report</a></td>
  </tr>
 {% endfor %}
 </table>

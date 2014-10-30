@@ -1,18 +1,36 @@
-- Analysis: nickloman-bwa
-  Input: Ecoli_R73_2D.fastq
-  Filename: ./nickloman-bwa/Ecoli_R73_2D.sort.bam
-  Mean_Alignment_Length: 843
-  Unaligned_Reads: 4670
-  Aligned_Reads: 7153
-- Analysis: nickloman-bwa-pacio
-  Input: Ecoli_R73_2D.fastq
-  Filename: ./nickloman-bwa-pacbio/Ecoli_R73_2D.sort.bam
-  Mean_Alignment_Length: 6063
-  Unaligned_Reads: 3398
-  Aligned_Reads: 8425
-- Analysis: nickloman-last-q2
-  Input: Ecoli_R73_2D.fastq
-  Filename: ./nickloman-last-q2/Ecoli_R73_2D.convert_sort.bam
-  Mean_Alignment_Length: 3742
-  Unaligned_Reads: 0
-  Aligned_Reads: 8748
+- {Aligned_Reads: 16401, Input: Ecoli_R7_2D, Mean_Alignment_Length: 3832, Percent_Aligned: '81.65',
+  Recipe: nickloman-last-q2, Unaligned_Reads: 3686, author: nickloman, input: fasta,
+  requires: bwa, title: LAST with -q2, type: alignment, url: 'http://last.cbrc.jp/last-490.zip',
+  version: 0.7.10-r789}
+
+- {Aligned_Reads: 15418, Input: Ecoli_R7_2D, Mean_Alignment_Length: 6758, Percent_Aligned: '76.76',
+  Recipe: nickloman-bwa-pacbio, Unaligned_Reads: 4669, author: nickloman, input: fasta,
+  requires: bwa, title: BWA using Pacbio settings, type: alignment, version: 0.7.10-r789}
+
+- {Aligned_Reads: 17056, Input: Ecoli_R7_2D, Mean_Alignment_Length: 4862, Percent_Aligned: '84.91',
+  Recipe: nickloman-last-q1, Unaligned_Reads: 3031, author: nickloman, input: fasta,
+  requires: last, title: LAST with -q1, type: alignment, url: 'http://last.cbrc.jp/last-490.zip',
+  version: 490}
+
+- {Aligned_Reads: 9662, Input: Ecoli_R7_2D, Mean_Alignment_Length: 225, Percent_Aligned: '48.10',
+  Recipe: nickloman-bwa, Unaligned_Reads: 10425, author: nickloman, input: fastq,
+  requires: bwa, title: BWA using default settings, type: alignment, version: 0.7.10-r789}
+
+- {Aligned_Reads: 8748, Input: Ecoli_R73_2D, Mean_Alignment_Length: 3742, Percent_Aligned: '73.99',
+  Recipe: nickloman-last-q2, Unaligned_Reads: 3075, author: nickloman, input: fasta,
+  requires: bwa, title: LAST with -q2, type: alignment, url: 'http://last.cbrc.jp/last-490.zip',
+  version: 0.7.10-r789}
+
+- {Aligned_Reads: 8425, Input: Ecoli_R73_2D, Mean_Alignment_Length: 6063, Percent_Aligned: '71.26',
+  Recipe: nickloman-bwa-pacbio, Unaligned_Reads: 3398, author: nickloman, input: fasta,
+  requires: bwa, title: BWA using Pacbio settings, type: alignment, version: 0.7.10-r789}
+
+- {Aligned_Reads: 8914, Input: Ecoli_R73_2D, Mean_Alignment_Length: 4073, Percent_Aligned: '75.40',
+  Recipe: nickloman-last-q1, Unaligned_Reads: 2909, author: nickloman, input: fasta,
+  requires: last, title: LAST with -q1, type: alignment, url: 'http://last.cbrc.jp/last-490.zip',
+  version: 490}
+
+- {Aligned_Reads: 7153, Input: Ecoli_R73_2D, Mean_Alignment_Length: 843, Percent_Aligned: '60.50',
+  Recipe: nickloman-bwa, Unaligned_Reads: 4670, author: nickloman, input: fastq, requires: bwa,
+  title: BWA using default settings, type: alignment, version: 0.7.10-r789}
+
