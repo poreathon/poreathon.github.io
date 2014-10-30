@@ -3,7 +3,6 @@ layout: page
 title: Pipelines
 ---
 
-
 # Proposed Pipelines
 
 ## Alignment
