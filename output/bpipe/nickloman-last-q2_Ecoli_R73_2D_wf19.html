@@ -223,7 +223,7 @@
     <body>
         <div id='hd'>
             <h1>Pipeline Report</h1>
-            <p class='creationDate'>Created by <a class='unobtrusiveLink' href='http://bpipe.org'>Bpipe</a>, Wed Dec 10 16:23:07 GMT 2014</p>
+            <p class='creationDate'>Created by <a class='unobtrusiveLink' href='http://bpipe.org'>Bpipe</a>, Wed Dec 10 16:33:30 GMT 2014</p>
         </div>
 
         <div id='bd'>
@@ -261,7 +261,7 @@
                                 <div class='joiner'>&#8594;</div>
                               
                         
-                        <div style="width:67%" 
+                        <div style="width:64%" 
                              class='stageblock '>
                           <a class='stageLink' 
                              href='#stage_2_align'>align</a>
@@ -273,10 +273,10 @@
                                 <div class='joiner'>&#8594;</div>
                               
                         
-                        <div style="width:3%" 
+                        <div style="width:7%" 
                              class='stageblock '>
                           <a class='stageLink' 
-                             href='#stage_3_convert'>conver...</a>
+                             href='#stage_3_convert'>convert...</a>
                         </div>
                         
                     
@@ -342,19 +342,15 @@
                 <div style='width:100%;' class='annotationline'>
                     
                         <div style="width:3%" class='blockannotation'>
-                            1.571 s
+                            1.594 s
                         </div>
                     
-                        <div style="width:67%" class='blockannotation'>
-                            7 minutes, 49.238 s
+                        <div style="width:64%" class='blockannotation'>
+                            4 minutes, 0.317 s
                         </div>
                     
-                        <div style="width:3%" class='blockannotation'>
-                            26.598 s
-                        </div>
-                    
-                        <div style="width:3%" class='blockannotation'>
-                            0.103 s
+                        <div style="width:7%" class='blockannotation'>
+                            26.408 s
                         </div>
                     
                         <div style="width:3%" class='blockannotation'>
@@ -362,15 +358,19 @@
                         </div>
                     
                         <div style="width:3%" class='blockannotation'>
-                            1.529 s
+                            0.103 s
                         </div>
                     
                         <div style="width:3%" class='blockannotation'>
-                            6.340 s
+                            1.535 s
                         </div>
                     
                         <div style="width:3%" class='blockannotation'>
-                            1.621 s
+                            6.454 s
+                        </div>
+                    
+                        <div style="width:3%" class='blockannotation'>
+                            1.697 s
                         </div>
                     
                 </div>
@@ -379,7 +379,7 @@
         	<hr>
             <h2 class='hr'>Pipeline Stages</h2>
             <br class='h2hr'>
-            <p style='position: relative; top: -1em;'>Total Runtime = 7.410 seconds</p>
+            <p style='position: relative; top: -1em;'>Total Runtime = 4 minutes, 45.515 seconds</p>
             <ol class='stageListOuter'>
             
                 <li class='stageList'>
@@ -411,7 +411,7 @@
                                 <td>
                                 <ul class='inputs'>
                                 
-                                    <li class='input'>input/nanopore/Ecoli_R73_2D.fasta</li>
+                                    <li class='input'>input/nanopore/Ecoli_R73_2D_wf19.fasta</li>
                                 
                                 </ul>
                                 </td>
@@ -420,7 +420,7 @@
                         </tr>
                         
                         
-                        <tr><th>Commands</th><td></td></tr>
+                        <tr><th>Commands</th><td>lastdb output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.index_reference.lastindex input/refs/NC_000913.fna && touch output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.index_reference.lastindex</td></tr>
 
 
                         
@@ -430,7 +430,7 @@
                             <td>
                                 <ul class='outputs'>
                                 
-                                    <li>output/alignment/nickloman-last-q1/Ecoli_R73_2D.index_reference.lastindex</li>
+                                    <li>output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.index_reference.lastindex</li>
                                 
                                 </ul>
                             </td>
@@ -447,10 +447,10 @@
                             <th class='docLabel'>Execution Time</th>
                             <td>
                                 
-                                    2014-12-10 16:23:3 
+                                    2014-12-10 16:28:48 - 2014-12-10 16:28:50
                                 
                                 
-                                (0.098 seconds)
+                                (1.790 seconds)
                                 
                             </td>
                         </tr>
@@ -489,7 +489,7 @@
                                 <td>
                                 <ul class='inputs'>
                                 
-                                    <li class='input'>input/nanopore/Ecoli_R73_2D.fasta</li>
+                                    <li class='input'>input/nanopore/Ecoli_R73_2D_wf19.fasta</li>
                                 
                                 </ul>
                                 </td>
@@ -498,7 +498,7 @@
                         </tr>
                         
                         
-                        <tr><th>Commands</th><td></td></tr>
+                        <tr><th>Commands</th><td>lastal -q 2 -a 1 -b 1 output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.index_reference.lastindex input/nanopore/Ecoli_R73_2D_wf19.fasta > output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.index_reference.align.maf</td></tr>
 
 
                         
@@ -508,7 +508,7 @@
                             <td>
                                 <ul class='outputs'>
                                 
-                                    <li>output/alignment/nickloman-last-q1/Ecoli_R73_2D.index_reference.align.maf</li>
+                                    <li>output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.index_reference.align.maf</li>
                                 
                                 </ul>
                             </td>
@@ -525,10 +525,10 @@
                             <th class='docLabel'>Execution Time</th>
                             <td>
                                 
-                                    2014-12-10 16:23:3 
+                                    2014-12-10 16:28:50 - 2014-12-10 16:32:50
                                 
                                 
-                                (0.043 seconds)
+                                (4 minutes, 0.392 seconds)
                                 
                             </td>
                         </tr>
@@ -567,7 +567,7 @@
                                 <td>
                                 <ul class='inputs'>
                                 
-                                    <li class='input'>output/alignment/nickloman-last-q1/Ecoli_R73_2D.index_reference.align.maf</li>
+                                    <li class='input'>output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.index_reference.align.maf</li>
                                 
                                 </ul>
                                 </td>
@@ -576,7 +576,7 @@
                         </tr>
                         
                         
-                        <tr><th>Commands</th><td></td></tr>
+                        <tr><th>Commands</th><td>maf-convert sam output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.index_reference.align.maf | samtools view -T input/refs/NC_000913.fna -bS - | samtools sort -@ 16 - output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.index_reference.align.convert</td></tr>
 
 
                         
@@ -586,7 +586,7 @@
                             <td>
                                 <ul class='outputs'>
                                 
-                                    <li>output/alignment/nickloman-last-q1/Ecoli_R73_2D.index_reference.align.convert.bam</li>
+                                    <li>output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.index_reference.align.convert.bam</li>
                                 
                                 </ul>
                             </td>
@@ -604,7 +604,8 @@
                                     
                                         <a href='http://samtools.sourceforge.net/'>samtools</a>
                                      :
-                                    
+                                    1.1
+
                                     
                                     
                                      - <span class=toolDesc>A suite of utilities for sorting, indexing, viewing and calling variants on NGS data</span>
@@ -623,10 +624,10 @@
                             <th class='docLabel'>Execution Time</th>
                             <td>
                                 
-                                    2014-12-10 16:23:3 
+                                    2014-12-10 16:32:50 - 2014-12-10 16:33:16
                                 
                                 
-                                (0.045 seconds)
+                                (26.467 seconds)
                                 
                             </td>
                         </tr>
@@ -665,7 +666,7 @@
                                 <td>
                                 <ul class='inputs'>
                                 
-                                    <li class='input'>output/alignment/nickloman-last-q1/Ecoli_R73_2D.index_reference.align.convert.bam</li>
+                                    <li class='input'>output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.index_reference.align.convert.bam</li>
                                 
                                 </ul>
                                 </td>
@@ -674,7 +675,7 @@
                         </tr>
                         
                         
-                        <tr><th>Commands</th><td></td></tr>
+                        <tr><th>Commands</th><td>cp output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.index_reference.align.convert.bam output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.bam</td></tr>
 
 
                         
@@ -684,7 +685,7 @@
                             <td>
                                 <ul class='outputs'>
                                 
-                                    <li>output/alignment/nickloman-last-q1/Ecoli_R73_2D.final.bam</li>
+                                    <li>output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.bam</li>
                                 
                                 </ul>
                             </td>
@@ -701,10 +702,10 @@
                             <th class='docLabel'>Execution Time</th>
                             <td>
                                 
-                                    2014-12-10 16:23:3 
+                                    2014-12-10 16:33:16 
                                 
                                 
-                                (0.045 seconds)
+                                (0.196 seconds)
                                 
                             </td>
                         </tr>
@@ -743,7 +744,7 @@
                                 <td>
                                 <ul class='inputs'>
                                 
-                                    <li class='input'>output/alignment/nickloman-last-q1/Ecoli_R73_2D.final.bam</li>
+                                    <li class='input'>output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.bam</li>
                                 
                                 </ul>
                                 </td>
@@ -752,7 +753,7 @@
                         </tr>
                         
                         
-                        <tr><th>Commands</th><td>genomeCoverageBed -ibam output/alignment/nickloman-last-q1/Ecoli_R73_2D.final.bam | grep ^genome > output/alignment/nickloman-last-q1/Ecoli_R73_2D.final.bam.cov.txt</td></tr>
+                        <tr><th>Commands</th><td>genomeCoverageBed -ibam output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.bam | grep ^genome > output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.bam.cov.txt</td></tr>
 
 
                         
@@ -762,7 +763,7 @@
                             <td>
                                 <ul class='outputs'>
                                 
-                                    <li>output/alignment/nickloman-last-q1/Ecoli_R73_2D.final.bam</li>
+                                    <li>output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.bam</li>
                                 
                                 </ul>
                             </td>
@@ -779,10 +780,10 @@
                             <th class='docLabel'>Execution Time</th>
                             <td>
                                 
-                                    2014-12-10 16:23:3 - 2014-12-10 16:23:6
+                                    2014-12-10 16:33:17 - 2014-12-10 16:33:20
                                 
                                 
-                                (3.276 seconds)
+                                (2.957 seconds)
                                 
                             </td>
                         </tr>
@@ -821,7 +822,7 @@
                                 <td>
                                 <ul class='inputs'>
                                 
-                                    <li class='input'>output/alignment/nickloman-last-q1/Ecoli_R73_2D.final.bam</li>
+                                    <li class='input'>output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.bam</li>
                                 
                                 </ul>
                                 </td>
@@ -830,7 +831,7 @@
                         </tr>
                         
                         
-                        <tr><th>Commands</th><td></td></tr>
+                        <tr><th>Commands</th><td>cov_histogram.R output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.bam.cov.txt output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.draw_histo.png</td></tr>
 
 
                         
@@ -840,7 +841,7 @@
                             <td>
                                 <ul class='outputs'>
                                 
-                                    <li>output/alignment/nickloman-last-q1/Ecoli_R73_2D.final.draw_histo.png</li>
+                                    <li>output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.draw_histo.png</li>
                                 
                                 </ul>
                             </td>
@@ -857,10 +858,10 @@
                             <th class='docLabel'>Execution Time</th>
                             <td>
                                 
-                                    2014-12-10 16:23:6 
+                                    2014-12-10 16:33:20 - 2014-12-10 16:33:21
                                 
                                 
-                                (0.015 seconds)
+                                (1.572 seconds)
                                 
                             </td>
                         </tr>
@@ -899,7 +900,7 @@
                                 <td>
                                 <ul class='inputs'>
                                 
-                                    <li class='input'>output/alignment/nickloman-last-q1/Ecoli_R73_2D.final.draw_histo.png</li>
+                                    <li class='input'>output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.draw_histo.png</li>
                                 
                                 </ul>
                                 </td>
@@ -908,7 +909,7 @@
                         </tr>
                         
                         
-                        <tr><th>Commands</th><td></td></tr>
+                        <tr><th>Commands</th><td>count-errors.py output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.bam > output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.count_errors.errors.txt</td></tr>
 
 
                         
@@ -918,7 +919,7 @@
                             <td>
                                 <ul class='outputs'>
                                 
-                                    <li>output/alignment/nickloman-last-q1/Ecoli_R73_2D.final.count_errors.errors.txt</li>
+                                    <li>output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.count_errors.errors.txt</li>
                                 
                                 </ul>
                             </td>
@@ -935,10 +936,10 @@
                             <th class='docLabel'>Execution Time</th>
                             <td>
                                 
-                                    2014-12-10 16:23:6 
+                                    2014-12-10 16:33:21 - 2014-12-10 16:33:28
                                 
                                 
-                                (0.019 seconds)
+                                (6.499 seconds)
                                 
                             </td>
                         </tr>
@@ -977,7 +978,7 @@
                                 <td>
                                 <ul class='inputs'>
                                 
-                                    <li class='input'>output/alignment/nickloman-last-q1/Ecoli_R73_2D.final.count_errors.errors.txt</li>
+                                    <li class='input'>output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.count_errors.errors.txt</li>
                                 
                                 </ul>
                                 </td>
@@ -986,7 +987,7 @@
                         </tr>
                         
                         
-                        <tr><th>Commands</th><td></td></tr>
+                        <tr><th>Commands</th><td>aln_histogram.R output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.count_errors.errors.txt output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.count_errors.errors.draw_alignment_length_histogram.png</td></tr>
 
 
                         
@@ -996,7 +997,7 @@
                             <td>
                                 <ul class='outputs'>
                                 
-                                    <li>output/alignment/nickloman-last-q1/Ecoli_R73_2D.final.count_errors.errors.draw_alignment_length_histogram.png</li>
+                                    <li>output/alignment/nickloman-last-q2/Ecoli_R73_2D_wf19.final.count_errors.errors.draw_alignment_length_histogram.png</li>
                                 
                                 </ul>
                             </td>
@@ -1013,10 +1014,10 @@
                             <th class='docLabel'>Execution Time</th>
                             <td>
                                 
-                                    2014-12-10 16:23:6 
+                                    2014-12-10 16:33:28 - 2014-12-10 16:33:30
                                 
                                 
-                                (0.039 seconds)
+                                (1.740 seconds)
                                 
                             </td>
                         </tr>

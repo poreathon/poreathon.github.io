@@ -223,7 +223,7 @@
     <body>
         <div id='hd'>
             <h1>Pipeline Report</h1>
-            <p class='creationDate'>Created by <a class='unobtrusiveLink' href='http://bpipe.org'>Bpipe</a>, Thu Oct 30 15:49:37 GMT 2014</p>
+            <p class='creationDate'>Created by <a class='unobtrusiveLink' href='http://bpipe.org'>Bpipe</a>, Wed Dec 10 16:22:55 GMT 2014</p>
         </div>
 
         <div id='bd'>
@@ -249,7 +249,7 @@
                     
 
                         
-                        <div style="width:4%" 
+                        <div style="width:3%" 
                              class='stageblock '>
                           <a class='stageLink' 
                              href='#stage_1_index_reference'>index_...</a>
@@ -261,7 +261,7 @@
                                 <div class='joiner'>&#8594;</div>
                               
                         
-                        <div style="width:71%" 
+                        <div style="width:64%" 
                              class='stageblock '>
                           <a class='stageLink' 
                              href='#stage_2_align'>align</a>
@@ -273,10 +273,10 @@
                                 <div class='joiner'>&#8594;</div>
                               
                         
-                        <div style="width:7%" 
+                        <div style="width:6%" 
                              class='stageblock '>
                           <a class='stageLink' 
-                             href='#stage_3_convert'>convert...</a>
+                             href='#stage_3_convert'>conver...</a>
                         </div>
                         
                     
@@ -285,44 +285,92 @@
                                 <div class='joiner'>&#8594;</div>
                               
                         
-                        <div style="width:7%" 
+                        <div style="width:3%" 
                              class='stageblock '>
                           <a class='stageLink' 
-                             href='#stage_4_histo'>histo</a>
+                             href='#stage_4_finalise_bam'>finali...</a>
+                        </div>
+                        
+                    
+
+                        
+                                <div class='joiner'>&#8594;</div>
+                              
+                        
+                        <div style="width:3%" 
+                             class='stageblock '>
+                          <a class='stageLink' 
+                             href='#stage_5_histo'>histo</a>
+                        </div>
+                        
+                    
+
+                        
+                                <div class='joiner'>&#8594;</div>
+                              
+                        
+                        <div style="width:3%" 
+                             class='stageblock '>
+                          <a class='stageLink' 
+                             href='#stage_6_draw_histo'>draw_h...</a>
+                        </div>
+                        
+                    
+
+                        
+                                <div class='joiner'>&#8594;</div>
+                              
+                        
+                        <div style="width:3%" 
+                             class='stageblock '>
+                          <a class='stageLink' 
+                             href='#stage_7_count_errors'>count_...</a>
                         </div>
                         
                     
 
                         
                         
-                        <div style="width:4%" 
+                        <div style="width:3%" 
                              class='stageblock '>
                           <a class='stageLink' 
-                             href='#stage_5_draw_histo'>draw_h...</a>
+                             href='#stage_8_draw_alignment_length_histogram'>draw_a...</a>
                         </div>
                         
                     
                 </div> 
                 <div style='width:100%;' class='annotationline'>
                     
-                        <div style="width:4%" class='blockannotation'>
+                        <div style="width:3%" class='blockannotation'>
                             1.565 s
                         </div>
                     
-                        <div style="width:71%" class='blockannotation'>
+                        <div style="width:64%" class='blockannotation'>
                             3 minutes, 56.361 s
                         </div>
                     
-                        <div style="width:7%" class='blockannotation'>
+                        <div style="width:6%" class='blockannotation'>
                             23.622 s
                         </div>
                     
-                        <div style="width:7%" class='blockannotation'>
-                            23.622 s
+                        <div style="width:3%" class='blockannotation'>
+                            0.102 s
                         </div>
                     
-                        <div style="width:4%" class='blockannotation'>
-                            1.416 s
+                        <div style="width:3%" class='blockannotation'>
+                            0.102 s
+                        </div>
+                    
+                        <div style="width:3%" class='blockannotation'>
+                            1.453 s
+                        </div>
+                    
+                        <div style="width:3%" class='blockannotation'>
+                            6.234 s
+                        </div>
+                    
+                        <div style="width:3%" class='blockannotation'>
+                            1.533 s
                         </div>
                     
                 </div>
@@ -331,7 +379,7 @@
         	<hr>
             <h2 class='hr'>Pipeline Stages</h2>
             <br class='h2hr'>
-            <p style='position: relative; top: -1em;'>Total Runtime = 4 minutes, 32.290 seconds</p>
+            <p style='position: relative; top: -1em;'>Total Runtime = 7.278 seconds</p>
             <ol class='stageListOuter'>
             
                 <li class='stageList'>
@@ -372,7 +420,7 @@
                         </tr>
                         
                         
-                        <tr><th>Commands</th><td>lastdb output/alignment/nickloman-last-q2/Ecoli_R73_2D.index_reference.lastindex input/refs/NC_000913.fna && touch output/alignment/nickloman-last-q2/Ecoli_R73_2D.index_reference.lastindex</td></tr>
+                        <tr><th>Commands</th><td></td></tr>
 
 
                         
@@ -399,10 +447,10 @@
                             <th class='docLabel'>Execution Time</th>
                             <td>
                                 
-                                    2014-10-30 15:45:5 - 2014-10-30 15:45:7
+                                    2014-12-10 16:22:51 
                                 
                                 
-                                (1.922 seconds)
+                                (0.104 seconds)
                                 
                             </td>
                         </tr>
@@ -450,7 +498,7 @@
                         </tr>
                         
                         
-                        <tr><th>Commands</th><td>lastal -q 2 -a 1 -b 1 output/alignment/nickloman-last-q2/Ecoli_R73_2D.index_reference.lastindex input/nanopore/Ecoli_R73_2D.fasta > output/alignment/nickloman-last-q2/Ecoli_R73_2D.index_reference.align.maf</td></tr>
+                        <tr><th>Commands</th><td></td></tr>
 
 
                         
@@ -477,10 +525,10 @@
                             <th class='docLabel'>Execution Time</th>
                             <td>
                                 
-                                    2014-10-30 15:45:7 - 2014-10-30 15:49:4
+                                    2014-12-10 16:22:51 
                                 
                                 
-                                (3 minutes, 56.622 seconds)
+                                (0.044 seconds)
                                 
                             </td>
                         </tr>
@@ -528,7 +576,7 @@
                         </tr>
                         
                         
-                        <tr><th>Commands</th><td>maf-convert sam output/alignment/nickloman-last-q2/Ecoli_R73_2D.index_reference.align.maf | samtools view -T input/refs/NC_000913.fna -bS - | samtools sort -@ 16 - output/alignment/nickloman-last-q2/Ecoli_R73_2D.index_reference.align.convert</td></tr>
+                        <tr><th>Commands</th><td></td></tr>
 
 
                         
@@ -576,10 +624,10 @@
                             <th class='docLabel'>Execution Time</th>
                             <td>
                                 
-                                    2014-10-30 15:49:4 - 2014-10-30 15:49:27
+                                    2014-12-10 16:22:51 
                                 
                                 
-                                (23.686 seconds)
+                                (0.047 seconds)
                                 
                             </td>
                         </tr>
@@ -590,7 +638,85 @@
                 </li>
             
                 <li class='stageList'>
-                    <h3 class='stageTitle'><a name='stage_4_histo'>
+                    <h3 class='stageTitle'><a name='stage_4_finalise_bam'>
+                        
+                            finalise_bam
+                        
+                        </a>
+                        
+                        <span class='statusMark success' >
+                        
+                        &#10003;
+                        
+                        </span>
+                    </h3>
+                    <div class='bd'>
+
+                    
+                        
+                        
+
+                        <table>
+                        
+
+                        
+                        <tr>
+                            <th class='docLabel'>Inputs</th>
+                            
+                                <td>
+                                <ul class='inputs'>
+                                
+                                    <li class='input'>output/alignment/nickloman-last-q2/Ecoli_R73_2D.index_reference.align.convert.bam</li>
+                                
+                                </ul>
+                                </td>
+                            
+                            </td>
+                        </tr>
+                        
+                        
+                        <tr><th>Commands</th><td></td></tr>
+
+
+                        
+                        <tr>
+                            <th class='docLabel'>Outputs</th>
+                            
+                            <td>
+                                <ul class='outputs'>
+                                
+                                    <li>output/alignment/nickloman-last-q2/Ecoli_R73_2D.final.bam</li>
+                                
+                                </ul>
+                            </td>
+                            
+                        </tr>
+                        
+
+                        
+
+                        
+                        
+                        
+                        <tr>
+                            <th class='docLabel'>Execution Time</th>
+                            <td>
+                                
+                                    2014-12-10 16:22:51 
+                                
+                                
+                                (0.045 seconds)
+                                
+                            </td>
+                        </tr>
+                        
+                        </table>
+                    
+                    </div>
+                </li>
+            
+                <li class='stageList'>
+                    <h3 class='stageTitle'><a name='stage_5_histo'>
                         
                             histo
                         
@@ -618,7 +744,7 @@
                                 <td>
                                 <ul class='inputs'>
                                 
-                                    <li class='input'>output/alignment/nickloman-last-q2/Ecoli_R73_2D.index_reference.align.convert.bam</li>
+                                    <li class='input'>output/alignment/nickloman-last-q2/Ecoli_R73_2D.final.bam</li>
                                 
                                 </ul>
                                 </td>
@@ -627,7 +753,7 @@
                         </tr>
                         
                         
-                        <tr><th>Commands</th><td>genomeCoverageBed -ibam output/alignment/nickloman-last-q2/Ecoli_R73_2D.index_reference.align.convert.bam | grep ^genome > output/alignment/nickloman-last-q2/Ecoli_R73_2D.index_reference.align.convert.bam.cov.txt</td></tr>
+                        <tr><th>Commands</th><td>genomeCoverageBed -ibam output/alignment/nickloman-last-q2/Ecoli_R73_2D.final.bam | grep ^genome > output/alignment/nickloman-last-q2/Ecoli_R73_2D.final.bam.cov.txt</td></tr>
 
 
                         
@@ -637,7 +763,7 @@
                             <td>
                                 <ul class='outputs'>
                                 
-                                    <li>output/alignment/nickloman-last-q2/Ecoli_R73_2D.index_reference.align.convert.bam</li>
+                                    <li>output/alignment/nickloman-last-q2/Ecoli_R73_2D.final.bam</li>
                                 
                                 </ul>
                             </td>
@@ -654,10 +780,10 @@
                             <th class='docLabel'>Execution Time</th>
                             <td>
                                 
-                                    2014-10-30 15:49:27 - 2014-10-30 15:49:35
+                                    2014-12-10 16:22:51 - 2014-12-10 16:22:54
                                 
                                 
-                                (7.498 seconds)
+                                (3.072 seconds)
                                 
                             </td>
                         </tr>
@@ -668,7 +794,7 @@
                 </li>
             
                 <li class='stageList'>
-                    <h3 class='stageTitle'><a name='stage_5_draw_histo'>
+                    <h3 class='stageTitle'><a name='stage_6_draw_histo'>
                         
                             draw_histo
                         
@@ -696,7 +822,7 @@
                                 <td>
                                 <ul class='inputs'>
                                 
-                                    <li class='input'>output/alignment/nickloman-last-q2/Ecoli_R73_2D.index_reference.align.convert.bam</li>
+                                    <li class='input'>output/alignment/nickloman-last-q2/Ecoli_R73_2D.final.bam</li>
                                 
                                 </ul>
                                 </td>
@@ -705,7 +831,7 @@
                         </tr>
                         
                         
-                        <tr><th>Commands</th><td>cov_histogram.R output/alignment/nickloman-last-q2/Ecoli_R73_2D.index_reference.align.convert.bam.cov.txt output/alignment/nickloman-last-q2/Ecoli_R73_2D.index_reference.align.convert.draw_histo.png</td></tr>
+                        <tr><th>Commands</th><td></td></tr>
 
 
                         
@@ -715,7 +841,7 @@
                             <td>
                                 <ul class='outputs'>
                                 
-                                    <li>output/alignment/nickloman-last-q2/Ecoli_R73_2D.index_reference.align.convert.draw_histo.png</li>
+                                    <li>output/alignment/nickloman-last-q2/Ecoli_R73_2D.final.draw_histo.png</li>
                                 
                                 </ul>
                             </td>
@@ -732,10 +858,166 @@
                             <th class='docLabel'>Execution Time</th>
                             <td>
                                 
-                                    2014-10-30 15:49:35 - 2014-10-30 15:49:36
+                                    2014-12-10 16:22:54 
                                 
                                 
-                                (1.456 seconds)
+                                (0.018 seconds)
+                                
+                            </td>
+                        </tr>
+                        
+                        </table>
+                    
+                    </div>
+                </li>
+            
+                <li class='stageList'>
+                    <h3 class='stageTitle'><a name='stage_7_count_errors'>
+                        
+                            count_errors
+                        
+                        </a>
+                        
+                        <span class='statusMark success' >
+                        
+                        &#10003;
+                        
+                        </span>
+                    </h3>
+                    <div class='bd'>
+
+                    
+                        
+                        
+
+                        <table>
+                        
+
+                        
+                        <tr>
+                            <th class='docLabel'>Inputs</th>
+                            
+                                <td>
+                                <ul class='inputs'>
+                                
+                                    <li class='input'>output/alignment/nickloman-last-q2/Ecoli_R73_2D.final.draw_histo.png</li>
+                                
+                                </ul>
+                                </td>
+                            
+                            </td>
+                        </tr>
+                        
+                        
+                        <tr><th>Commands</th><td></td></tr>
+
+
+                        
+                        <tr>
+                            <th class='docLabel'>Outputs</th>
+                            
+                            <td>
+                                <ul class='outputs'>
+                                
+                                    <li>output/alignment/nickloman-last-q2/Ecoli_R73_2D.final.count_errors.errors.txt</li>
+                                
+                                </ul>
+                            </td>
+                            
+                        </tr>
+                        
+
+                        
+
+                        
+                        
+                        
+                        <tr>
+                            <th class='docLabel'>Execution Time</th>
+                            <td>
+                                
+                                    2014-12-10 16:22:54 
+                                
+                                
+                                (0.023 seconds)
+                                
+                            </td>
+                        </tr>
+                        
+                        </table>
+                    
+                    </div>
+                </li>
+            
+                <li class='stageList'>
+                    <h3 class='stageTitle'><a name='stage_8_draw_alignment_length_histogram'>
+                        
+                            draw_alignment_length_histogram
+                        
+                        </a>
+                        
+                        <span class='statusMark success' >
+                        
+                        &#10003;
+                        
+                        </span>
+                    </h3>
+                    <div class='bd'>
+
+                    
+                        
+                        
+
+                        <table>
+                        
+
+                        
+                        <tr>
+                            <th class='docLabel'>Inputs</th>
+                            
+                                <td>
+                                <ul class='inputs'>
+                                
+                                    <li class='input'>output/alignment/nickloman-last-q2/Ecoli_R73_2D.final.count_errors.errors.txt</li>
+                                
+                                </ul>
+                                </td>
+                            
+                            </td>
+                        </tr>
+                        
+                        
+                        <tr><th>Commands</th><td></td></tr>
+
+
+                        
+                        <tr>
+                            <th class='docLabel'>Outputs</th>
+                            
+                            <td>
+                                <ul class='outputs'>
+                                
+                                    <li>output/alignment/nickloman-last-q2/Ecoli_R73_2D.final.count_errors.errors.draw_alignment_length_histogram.png</li>
+                                
+                                </ul>
+                            </td>
+                            
+                        </tr>
+                        
+
+                        
+
+                        
+                        
+                        
+                        <tr>
+                            <th class='docLabel'>Execution Time</th>
+                            <td>
+                                
+                                    2014-12-10 16:22:54 
+                                
+                                
+                                (0.018 seconds)
                                 
                             </td>
                         </tr>
