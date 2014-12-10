@@ -24,6 +24,7 @@ title: Home
   <td>{{ aln.Percent_Aligned }}</td>
   <td>{{ aln.Mean_Alignment_Length }}</td>
   <td><a href="output/alignment/{{ aln.Recipe }}_{{ aln.Input }}.histogram.png">Coverage plot</a>
+      <a href="output/alignment/{{ aln.Recipe }}_{{ aln.Input }}.length_histogram.png">Length plot</a>
       <a href="output/bpipe/{{ aln.Recipe }}_{{ aln.Input }}.html">Pipeline report</a></td>
  </tr>
 {% endfor %}
